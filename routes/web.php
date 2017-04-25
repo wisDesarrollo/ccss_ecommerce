@@ -13,6 +13,10 @@
 
 Route::get('/', 'MainController@home');
 
+Route::get('/carrito','ShoppingCartsController@index');
+
+Route::get('/payments/store', 'PaymentsController@store');
+
 Auth::routes();
 
 Route::resource('products','ProductsController');
@@ -24,9 +28,10 @@ Route::resource('products','ProductsController');
 	GET /products/:id => mostrar in producto con si ID
 
 	GET/products/:id/edit
-
-
-
 */
+Route::resource('in_shopping_carts','InShoppingCartsController', [
+		'only' => ['store','destroy']
+
+	]);
 
 Route::get('/home', 'HomeController@index');

@@ -167,7 +167,8 @@ return [
          * Package Service Providers...
          */
         Collective\Html\HtmlServiceProvider::class,
-
+        App\Providers\ShoppingCartProvider::class,
+        Anouar\Paypalpayment\PaypalpaymentServiceProvider::class,
 
         Laravel\Tinker\TinkerServiceProvider::class,
 
@@ -231,6 +232,7 @@ return [
 
         'Form' => Collective\Html\FormFacade::class, 
         'Html' => Collective\Html\HtmlFacade::class, 
+        'PaypalPayment' => Anouar\Paypalpayment\Facades\PaypalPayment::class,
     ],
 
 ];

@@ -3,6 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderCreated;
+use App\Mail\OrderUpdate;
+
 
 class Order extends Model
 {
@@ -10,7 +14,36 @@ class Order extends Model
 
 
 
-	public function address(){
+  public function shoppingCartID(){
+    return $this->shopping_cart->customid;
+  }
+
+  public function sendMail(){
+    Mail::to("ccss@utp.edu.co")->send(new OrderCreated($this));
+  }
+  public function sendUpdateMail(){
+    Mail::to("ccss@utp.edu.co")->send(new OrderUpdate($this));
+  }
+  public function shopping_cart(){
+    return $this->belongsTo('App\ShoppingCart');
+  }
+  public function scopeLatest($query){
+    return $query->orderID()->monthly();
+  }
+
+  public function scopeOrderID($query){
+    return $query->orderBy("id","desc");
+  }
+
+  public function scopeMonthly($query){
+    return $query->whereMonth("created_At","=",date("m"));
+  }
+	
+
+
+
+
+  public function address(){
 		return "$this->line1 $this->line2";
 	}
 
@@ -28,5 +61,12 @@ class Order extends Model
   		$orderData["shopping_cart_id"] = $shopping_cart->id;
 
   		return Order::create($orderData);
+    }
+
+    public static function  totalMonth(){
+      return Order::monthly()->sum('total');
+    }
+    public static function  totalMonthCount(){
+      return Order::monthly()->count();
     }
 }

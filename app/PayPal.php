@@ -57,7 +57,7 @@ class PayPal{
 	}
 
 	public function amount(){
-		return \PaypalPayment::amount()->setCurrency("USD")->setTotal($this->shopping_cart->total());
+		return \PaypalPayment::amount()->setCurrency("USD")->setTotal($this->shopping_cart->totalUSD());
 	}
 
 	public function payer(){

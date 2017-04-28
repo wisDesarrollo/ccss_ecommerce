@@ -8,6 +8,10 @@ use App\InShoppingCart;
 
 class InShoppingCartsController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware("shoppingcart");
+    }
     
 
     /**
@@ -19,13 +23,18 @@ class InShoppingCartsController extends Controller
      */
     public function store(Request $request)
     {
-        $shopping_cart_id = \ Session::get("shopping_cart_id");
-
-        $shopping_cart = ShoppingCart::findOrCreateBySessionID($shopping_cart_id);
+        $shopping_cart = $request->shopping_cart;
+        
         $response = InShoppingCart::create([
             "shopping_cart_id" => $shopping_cart->id,
             "product_id" => $request->product_id
         ]);
+
+        if($request->ajax()){
+            return response()->json([
+                    'products_count' => InShoppingCart::productsCount($shopping_cart->id)
+                ]);
+        }
 
         if($response){
             return redirect('/carrito');

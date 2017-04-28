@@ -3,5 +3,12 @@
 @section('title', 'productos')
 
 @section('content')
-	<h1>hola</h1>
+	<div class="container products-container text-center">
+		@foreach($products as $product)
+			@include("products.product",["product" => $product])
+		@endforeach
+	</div>
+	<div>
+    	{{$products->links()}}
+	</div>
 @endsection

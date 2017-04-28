@@ -11,28 +11,32 @@
 
 			<p>Corrobora los detalles de tu envio</p>
 
-			<div class="row">
+			<div class="row large-padding">
 				<div class="col-xs-6">Correo</div>
 				<div class="col-xs-6"> {{$order->email}} </div>
 			</div>
-			<div class="row">
+			<div class="row large-padding">
 				<div class="col-xs-6">Direccion</div>
 				<div class="col-xs-6"> {{$order->address()}} </div>
 			</div>
-			<div class="row">
+			<div class="row large-padding">
 				<div class="col-xs-6">Codigo Postal</div>
 				<div class="col-xs-6"> {{$order->postal_code}} </div>
 			</div>
-			<div class="row">
+			<div class="row large-padding">
 				<div class="col-xs-6">Ciudad</div>
 				<div class="col-xs-6"> {{$order->city}} </div>
 			</div>
-			<div class="row">
+			<div class="row large-padding">
 				<div class="col-xs-6">Estado Y Pais</div>
 				<div class="col-xs-6"> {{"$order->state  $order->country_code"}} </div>
 			</div>
-			<div class="text-center">
-				<a href="#">Link  de tu compra</a>
+			<div class="row large-padding">
+				<div class="col-xs-6">Total</div>
+				<div class="col-xs-6"> {{round($shopping_cart->total()/3000,3)}} </div>
+			</div>
+			<div class="text-center top-space">
+				<a href="{{url('/compras/'.$shopping_cart->customid)}}">Link  de tu compra</a>
 			</div>
 		</div>
 	</div>

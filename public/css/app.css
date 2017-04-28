@@ -2,6 +2,20 @@
   margin-bottom: 0;
 }
 
+.circle-shopping-cart {
+  background-color: #232980;
+  border-radius: 50%;
+  padding: 1em;
+}
+
+.products-container .product {
+  margin-top: 1em;
+}
+
+.product-avatar {
+  max-width: 100%;
+}
+
 .big-padding {
   padding: 30px;
 }
@@ -16,6 +30,10 @@
 
 .table {
   background-color: white;
+}
+
+.absolute {
+  position: absolute;
 }
 
 .floating {
@@ -35,6 +53,10 @@
 
 .no-padding {
   padding: 0px;
+}
+
+.top-space {
+  margin-top: 1em;
 }
 
 .large-padding {
@@ -63,6 +85,60 @@
 .product h1 {
   padding-bottom: 10px;
   border-bottom: solid 1px;
+}
+
+.product .action {
+  right: 1em;
+  top: 10px;
+}
+
+.sale-data {
+  padding: 1em;
+  text-align: center;
+  border-right: solid 1px #222;
+}
+
+.sale-data span {
+  display: block;
+  font-size: 2.2em;
+  color: #3f51b5;
+}
+
+.creado {
+  background-color: #d4e157;
+}
+
+.highlight {
+  -webkit-animation: highlight 1.5s;
+  animation: highlight 1.5s;
+}
+
+@-webkit-keyframes highlight {
+  50% {
+    background-color: #ffff00;
+    color: black;
+  }
+  100% {
+    background-color: inherit;
+  }
+  @-webkit-keyframes highlight {
+    50% {
+      background-color: #ffff00;
+      color: black;
+    }
+    100% {
+      background-color: inherit;
+    }
+  }
+  @keyframes highlight {
+    50% {
+      background-color: #ffff00;
+      color: black;
+    }
+    100% {
+      background-color: inherit;
+    }
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

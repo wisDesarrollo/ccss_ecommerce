@@ -20,16 +20,12 @@
 				<div class="col-xs-6"> {{$order->address()}} </div>
 			</div>
 			<div class="row large-padding">
-				<div class="col-xs-6">Codigo Postal</div>
-				<div class="col-xs-6"> {{$order->postal_code}} </div>
+				<div class="col-xs-6">Metodo De Pago</div>
+				<div class="col-xs-6"> {{$order->payment_type}} </div>
 			</div>
 			<div class="row large-padding">
 				<div class="col-xs-6">Ciudad</div>
 				<div class="col-xs-6"> {{$order->city}} </div>
-			</div>
-			<div class="row large-padding">
-				<div class="col-xs-6">Estado Y Pais</div>
-				<div class="col-xs-6"> {{"$order->state  $order->country_code"}} </div>
 			</div>
 			<div class="row large-padding">
 				<div class="col-xs-6">Total</div>

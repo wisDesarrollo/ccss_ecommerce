@@ -13,7 +13,7 @@
 
 			<div class="row top-space">
 				<div class="col-xs-4 col-md-3 col-lg-2 sale-data">
-					<span>{{round($totalMonth,3)}}USD</span>
+					<span>{{$totalMonth}}COP</span>
 					Ingreso del mes
 				</div>
 				<div class="col-xs-4 col-md-3 col-lg-2 sale-data">
@@ -40,7 +40,7 @@
 					@foreach($orders as $order)
 						<tr>
 							<td>{{$order->id}}</td>
-							<td>{{$order->recipient_name}}</td>
+							<td>{{$order->email}}</td>
 							<td>{{$order->address()}}</td>
 							<td>
 								<a href="#" data-type="text" data-pk="{{$order->id}}" data-url="{{url('/orders/'.$order->id)}}" data-title="Número guía" data-value="{{$order->guide_number}}" class="set-guide-number" data-name="guide_number"></a>

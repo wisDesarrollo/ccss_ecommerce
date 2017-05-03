@@ -8,7 +8,7 @@
 			@include("products.product",["product" => $product])
 		@endforeach
 	</div>
-	<div>
+	<div class="text-center">
     	{{$products->links()}}
 	</div>
 @endsection

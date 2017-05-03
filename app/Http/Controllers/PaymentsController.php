@@ -30,7 +30,9 @@ class PaymentsController extends Controller
     }
 
     public function create(Request $request){
+
         $shopping_cart = $request->shopping_cart;
+        $shopping_cart->approve();
         $order = new Order;
         $order->shopping_cart_id = $shopping_cart->id;
         $order->line1 = $request->direccion1;
@@ -43,7 +45,7 @@ class PaymentsController extends Controller
         $order->city = $request->ciudad;
         $order->recipient_name = $request->recipient_name;
         if($order->save()){
-            $shopping_cart->approve();
+            
             \Session::remove("shopping_cart_id");
             
             return view("shopping_carts.completed", ["shopping_cart" => $shopping_cart, "order" => $order]);

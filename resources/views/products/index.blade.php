@@ -21,7 +21,7 @@
 					<td>{{ $product->title }}</td>
 					<td>{{ $product->description }}</td>
 					<td>{{ $product->pricing }}</td>
-					<td>
+					<td >
 						<a href="{{url("/products/$product->id")}}">Ver</a>
 						<a href="{{url('/products/'. $product->id .'/edit')}}">
 							Editar

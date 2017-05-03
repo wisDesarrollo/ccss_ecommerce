@@ -9,6 +9,7 @@
 				<tr>
 					<td>Producto</td>
 					<td>Precio</td>
+					<td>Accion</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -16,6 +17,9 @@
 					<tr>
 						<td> {{$product->title}} </td>
 						<td> {{$product->pricing}} </td>
+						<td>
+							@include("shopping_carts.delete",["product" => $product,"shopping_cart" =>$shopping_cart])
+						</td>
 					</tr>
 				@endforeach
 				<tr>
@@ -25,7 +29,7 @@
 			</tbody>
 		</table>
 		<div class="text-right">
-			@include("shopping_carts.form")
+			@include("shopping_carts.form",["total" => $total])
 		</div>
 	</div>
 @endsection

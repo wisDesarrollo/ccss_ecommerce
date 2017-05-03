@@ -28,7 +28,8 @@ class PayPal{
 		try{
 			$payment->create($this->_apiContext);
 		}catch(\Exception $ex){
-			dd($ex);
+			//dd($ex);
+			dd( $this->amount());
 			exit(1);
 		}
 		return $payment;
@@ -57,7 +58,7 @@ class PayPal{
 	}
 
 	public function amount(){
-		return \PaypalPayment::amount()->setCurrency("USD")->setTotal($this->shopping_cart->totalUSD());
+		return \PaypalPayment::amount()->setCurrency("USD")->setTotal($this->shopping_cart->total());
 	}
 
 	public function payer(){

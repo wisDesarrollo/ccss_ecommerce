@@ -33,7 +33,7 @@
 			</div>
 			<div class="row large-padding">
 				<div class="col-xs-6">Total</div>
-				<div class="col-xs-6"> {{round($shopping_cart->total()/3000,3)}} </div>
+				<div class="col-xs-6"> {{$shopping_cart->total()}} </div>
 			</div>
 			<div class="text-center top-space">
 				<a href="{{url('/compras/'.$shopping_cart->customid)}}">Link  de tu compra</a>

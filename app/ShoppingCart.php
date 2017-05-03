@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ShoppingCart extends Model
 {
-	protected $fillable = ["status"];
+	protected $fillable = ["status","customid"];
 
 
     public function approve(){
@@ -44,7 +44,8 @@ class ShoppingCart extends Model
     }
 
     public function totalUSD(){
-        return $this->products()->sum("pricing") / 3000;
+        $total = $this->products()->sum("pricing") / 3000;
+        return $total;
     }
 
 

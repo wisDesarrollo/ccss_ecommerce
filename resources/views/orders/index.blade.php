@@ -43,7 +43,7 @@
 							<td>{{$order->recipient_name}}</td>
 							<td>{{$order->address()}}</td>
 							<td>
-								<a href="#" data-type="text" data-pk="{{$order->id}}" data-url="{{url('/orders/'.$order->id)}}" data-title="Número guía" data-value="{{$order->guide_number}}" class="set-guide-number" data-name="guide-number"></a>
+								<a href="#" data-type="text" data-pk="{{$order->id}}" data-url="{{url('/orders/'.$order->id)}}" data-title="Número guía" data-value="{{$order->guide_number}}" class="set-guide-number" data-name="guide_number"></a>
 							</td>
 							<td>
 								<a href="#" data-type="select" data-pk="{{$order->id}}" data-url="{{url('/orders/'.$order->id)}}" data-title="Status" data-value="{{$order->status}}" class="select-status" data-name="status"></a>

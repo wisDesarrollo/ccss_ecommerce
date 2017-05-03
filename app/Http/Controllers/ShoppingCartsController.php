@@ -25,9 +25,13 @@ class ShoppingCartsController extends Controller
     }
     public function checkout(Request $request){
         $shopping_cart = $request->shopping_cart;
+        /*
         $paypal = new PayPal($shopping_cart);
         $payment = $paypal->generate();
         return redirect($payment->getApprovalLink());
+        */
+
+        return view("orders.create", ['shopping_cart' => $shopping_cart]);
         
     }
     public function index(Request $request){
@@ -38,7 +42,7 @@ class ShoppingCartsController extends Controller
         $products = $shopping_cart->products()->get();
         $total = $shopping_cart->total();
 
-        return view("shopping_carts.index",['products' => $products, 'total' => $total]);
+        return view("shopping_carts.index",['products' => $products, 'total' => $total, 'shopping_cart' => $shopping_cart]);
         
     }
 }

@@ -21,7 +21,7 @@ class OrdersController extends Controller
     {
         $orders = Order::latest()->get();
 
-        $totalMonth = Order::totalMonth() / 3000;
+        $totalMonth = Order::totalMonth();
         $totalMonthCount = Order::totalMonthCount();
 
         return view('orders.index',['orders'=> $orders, 'totalMonth' => $totalMonth, 'totalMonthCount' => $totalMonthCount]);
@@ -43,7 +43,7 @@ class OrdersController extends Controller
         $field = $request->name;
 
         $order->$field = $request->value;
-        echo $order;
+        //echo $order;
         $order->save();
         return $order->$field;
     }

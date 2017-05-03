@@ -19,11 +19,11 @@ class CreateOrdersTable extends Migration
             $table->foreign("shopping_cart_id")->references("id")->on("shopping_carts");
             $table->string("line1");
             $table->string("line2")->nullable(true);
-            $table->string("city");
-            $table->string("postal_code");
-            $table->string("country_code");
-            $table->string("state");
-            $table->string("recipient_name");
+            $table->string("city")->nullable();
+            $table->string("postal_code")->nullable();
+            $table->string("country_code")->nullable();
+            $table->string("state")->nullable();
+            $table->string("recipient_name")->nullable();
             $table->string("email");
             $table->string("status")->default("creado");
             $table->string("guide-number")->nullable(true);

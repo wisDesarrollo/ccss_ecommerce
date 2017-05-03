@@ -2,6 +2,7 @@ $.fn.editable.defaults.mode = 'inline';
 $.fn.editable.defaults.ajaxOptions = {type: 'PUT'};
 
 $(document).ready(function(){
+	
 	$(".set-guide-number").editable();
 
 	$(".select-status").editable({

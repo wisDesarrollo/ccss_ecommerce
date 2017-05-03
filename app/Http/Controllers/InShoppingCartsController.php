@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\ShoppingCart;
 use App\InShoppingCart;
 
+
 class InShoppingCartsController extends Controller
 {
 
@@ -52,6 +53,11 @@ class InShoppingCartsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ids= explode(",,",$id);
+        $id_product = $ids[0];
+        $shopping_cart_id = $ids[1];
+        $id_in = InShoppingCart::where("product_id","=",$id_product)->where("shopping_cart_id",$shopping_cart_id)->first();
+        InShoppingCart::destroy($id_in->id);
+        return redirect('/carrito');
     }
 }

@@ -15,6 +15,7 @@ Route::get('/', 'MainController@home');
 
 Route::get('/carrito','ShoppingCartsController@index');
 Route::post('/carrito','ShoppingCartsController@checkout');
+Route::post('/payments','PaymentsController@create');
 
 Route::get('/payments/store', 'PaymentsController@store');
 

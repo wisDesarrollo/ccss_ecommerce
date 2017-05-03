@@ -22,6 +22,13 @@
 			<p>
 				{{$product->description}}
 			</p>
+			<br>
+			<p>
+				<strong>Precio</strong>
+			</p>
+			<p>
+				{{$product->pricing}}
+			</p>
 			<p>
 				@include("in_shopping_carts.form", ["product" => $product])
 			</p>

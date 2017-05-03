@@ -13,9 +13,9 @@ class ComposerStaticInit43a0166dbff0c9d0f96af72f5ba9cd24
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
-        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -290,9 +290,12 @@ class ComposerStaticInit43a0166dbff0c9d0f96af72f5ba9cd24
 
     public static $classMap = array (
         'AddColumnExtensionToProducts' => __DIR__ . '/../..' . '/database/migrations/2017_04_27_182302_add_column_extension_to_products.php',
+        'AddColumnPaymentTypeToOrders' => __DIR__ . '/../..' . '/database/migrations/2017_05_02_225227_add_column_payment_type_to_orders.php',
+        'AddColumnStatusToProduct' => __DIR__ . '/../..' . '/database/migrations/2017_05_02_160801_add_column_status_to_product.php',
         'AddCustomIDColumnToShoppingCarts' => __DIR__ . '/../..' . '/database/migrations/2017_04_25_142839_AddCustomIDColumnToShoppingCarts.php',
+        'Cre' => __DIR__ . '/../..' . '/database/migrations/2017_05_03_004218_cre.php',
         'CreateInShoppingCartsTable' => __DIR__ . '/../..' . '/database/migrations/2017_04_21_130430_create_in_shopping_carts_table.php',
-        'CreateOrdersTable' => __DIR__ . '/../..' . '/database/migrations/2017_04_24_210449_create_orders_table.php',
+        'CreateOrders' => __DIR__ . '/../..' . '/database/migrations/2017_05_03_004225_create_orders.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateProductsTable' => __DIR__ . '/../..' . '/database/migrations/2017_03_07_194214_create_products_table.php',
         'CreateShoppingCartsTable' => __DIR__ . '/../..' . '/database/migrations/2017_04_21_030226_create_shopping_carts_table.php',

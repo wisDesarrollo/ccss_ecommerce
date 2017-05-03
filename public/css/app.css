@@ -2,8 +2,14 @@
   margin-bottom: 0;
 }
 
+.navbar-custom {
+  background-color: #2ef70a;
+  color: #0f9a27;
+}
+
 .circle-shopping-cart {
-  background-color: #232980;
+  background-color: #0f9a27;
+  color: red;
   border-radius: 50%;
   padding: 1em;
 }

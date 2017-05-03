@@ -422,20 +422,20 @@
                                                               @foreach($products as $product)
 	                                                              <tr mc:repeatable>
 	                                                                <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-                                                                    	Total
+                                                                    	{{$product->title}}
                                                                   	</td>
                                                                   	<td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-                                                                    	{{$order->total}}
+                                                                    	{{$product->pricing}}
                                                                   	</td>
                                                                   
 	                                                              </tr>
                                                               @endforeach
                                                               <tr >
 	                                                                <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-                                                                    	{{$product->title}}
+                                                                    	total
                                                                   	</td>
                                                                   	<td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-                                                                    	{{$product->pricing}}
+                                                                    	{{$order->total}}
                                                                   	</td>
                                                                   
 	                                                              </tr>

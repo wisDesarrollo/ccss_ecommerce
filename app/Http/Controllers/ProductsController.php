@@ -18,7 +18,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
+        $products = Product::where("status",0)->get();
         return view("products.index",["products" => $products]);
     }
 
@@ -119,8 +119,14 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-        Product::destroy($id);
-        return redirect('/products');
+        $product = Product::find($id);
+        $product->delete_status();
+        if ($product->save()){
+            return redirect("/products");
+        }else{
+            return view("products.edit",['products' => $products]);
+        }
+        //return redirect('/products');
 
     }
 }

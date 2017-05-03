@@ -25,7 +25,9 @@
 			<tr>
 				<td>Total</td>
 				<td> {{$order->total}} </td>
+				<td><a href="url('/compras/'.$order->shoppingCartID())"></a></td>
 			</tr>
+
 		</tbody>
 	</table>
 </body>

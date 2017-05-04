@@ -1,4 +1,4 @@
-@extends("layouts.app")
+@extends("layouts.app3")
 @section("content")
 	<div class="big-padding text-center blue-grey shite-text">
 		<h1>Productos</h1>

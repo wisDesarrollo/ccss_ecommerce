@@ -11,7 +11,7 @@
 
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ url('../css/bootstrap/startbootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url('../bootstrap/startbootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href=" {{url('../bootstrap/startbootstrap/css/shop-homepage.css')}}" rel="stylesheet">

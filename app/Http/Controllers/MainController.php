@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use App\Product;
 class MainController extends Controller{
 	public function home(){
-		$products = Product::latest()->where("status",0)->simplePaginate(1);
+		$products = Product::latest()->where("status",0)->simplePaginate(15);
 
 		return view('main.home', ["products" => $products]);
 	}

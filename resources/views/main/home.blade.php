@@ -32,13 +32,13 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img class="slide-image" src="{{url('/products/images/wis2.jpg')}}" alt="">
+                                    <img class="slide-image" src="{{url('/images/wis2.jpg')}}" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="{{url('/products/images/img2.jpg')}}" alt="">
+                                    <img class="slide-image" src="{{url('/images/img2.jpg')}}" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="{{url('/products/images/wis2.jpg')}}" alt="">
+                                    <img class="slide-image" src="{{url('/images/wis2.jpg')}}" alt="">
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">

@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $tabla->integer('user_id')->unsigned()->index();
             $tabla->string('title');
             $tabla->text('description');
-            $tabla->decimal('pricing',9,2);//centavos
+            $tabla->integer('pricing',9,2);//centavos
             $tabla->timestamps();
         });
     }

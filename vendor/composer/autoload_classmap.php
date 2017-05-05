@@ -6,13 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddColomnProductTypeToProducts' => $baseDir . '/database/migrations/2017_05_04_234730_add_colomn_product_type_to_products.php',
     'AddColumnExtensionToProducts' => $baseDir . '/database/migrations/2017_04_27_182302_add_column_extension_to_products.php',
     'AddColumnPaymentTypeToOrders' => $baseDir . '/database/migrations/2017_05_02_225227_add_column_payment_type_to_orders.php',
     'AddColumnStatusToProduct' => $baseDir . '/database/migrations/2017_05_02_160801_add_column_status_to_product.php',
     'AddCustomIDColumnToShoppingCarts' => $baseDir . '/database/migrations/2017_04_25_142839_AddCustomIDColumnToShoppingCarts.php',
-    'Cre' => $baseDir . '/database/migrations/2017_05_03_004218_cre.php',
     'CreateInShoppingCartsTable' => $baseDir . '/database/migrations/2017_04_21_130430_create_in_shopping_carts_table.php',
-    'CreateOrders' => $baseDir . '/database/migrations/2017_05_03_004225_create_orders.php',
+    'CreateOrdersTable' => $baseDir . '/database/migrations/2017_04_24_210449_create_orders_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateProductsTable' => $baseDir . '/database/migrations/2017_03_07_194214_create_products_table.php',
     'CreateShoppingCartsTable' => $baseDir . '/database/migrations/2017_04_21_030226_create_shopping_carts_table.php',

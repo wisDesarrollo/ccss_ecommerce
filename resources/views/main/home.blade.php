@@ -10,11 +10,11 @@
             <div class="col-md-3">
                 <p class="lead">Shop Name</p>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Insumos Médicos</a>
-                    <a href="#" class="list-group-item">Instrumental Qúirúrgico</a>
-                    <a href="#" class="list-group-item">Ayudas Ortopédicas</a>
-                    <a href="#" class="list-group-item">Terapia Respiratoria</a>
-                    <a href="#" class="list-group-item">Productos Salud y Belleza</a>
+                    <a href=" {{url('/home/'.$id=0)}} " class="list-group-item">Insumos Médicos</a>
+                    <a href="{{url('/home/1')}}" class="list-group-item">Instrumental Qúirúrgico</a>
+                    <a href="{{url('/home/2')}}" class="list-group-item">Ayudas Ortopédicas</a>
+                    <a href="{{url('/home/3')}}" class="list-group-item">Terapia Respiratoria</a>
+                    <a href="{{url('/home/4')}}" class="list-group-item">Productos Salud y Belleza</a>
 
                 </div>
             </div>
@@ -50,6 +50,9 @@
                         </div>
                     </div>
 
+                </div>
+                <div class="text-center tipo">
+                    <h3> {{$tipo}} </h3>
                 </div>
                 <div class="row">
                 	@foreach($products as $product)

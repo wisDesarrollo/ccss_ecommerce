@@ -39,7 +39,7 @@ Route::resource('in_shopping_carts','InShoppingCartsController', [
 Route::resource('compras','ShoppingCartsController', ['only' => ['show']]);
 Route::resource('orders','OrdersController', ['only' => ['index', 'update']]);
 
-Route::get('/home', 'HomeController@index');
+Route::resource('home', 'MainController',['only' => ['index', 'show']]);
 
 Route::get('products/images/{filename}',function($filename){
 	$path = storage_path("app/images/$filename");

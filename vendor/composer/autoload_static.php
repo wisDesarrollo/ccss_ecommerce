@@ -289,13 +289,13 @@ class ComposerStaticInit43a0166dbff0c9d0f96af72f5ba9cd24
     );
 
     public static $classMap = array (
+        'AddColomnProductTypeToProducts' => __DIR__ . '/../..' . '/database/migrations/2017_05_04_234730_add_colomn_product_type_to_products.php',
         'AddColumnExtensionToProducts' => __DIR__ . '/../..' . '/database/migrations/2017_04_27_182302_add_column_extension_to_products.php',
         'AddColumnPaymentTypeToOrders' => __DIR__ . '/../..' . '/database/migrations/2017_05_02_225227_add_column_payment_type_to_orders.php',
         'AddColumnStatusToProduct' => __DIR__ . '/../..' . '/database/migrations/2017_05_02_160801_add_column_status_to_product.php',
         'AddCustomIDColumnToShoppingCarts' => __DIR__ . '/../..' . '/database/migrations/2017_04_25_142839_AddCustomIDColumnToShoppingCarts.php',
-        'Cre' => __DIR__ . '/../..' . '/database/migrations/2017_05_03_004218_cre.php',
         'CreateInShoppingCartsTable' => __DIR__ . '/../..' . '/database/migrations/2017_04_21_130430_create_in_shopping_carts_table.php',
-        'CreateOrders' => __DIR__ . '/../..' . '/database/migrations/2017_05_03_004225_create_orders.php',
+        'CreateOrdersTable' => __DIR__ . '/../..' . '/database/migrations/2017_04_24_210449_create_orders_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateProductsTable' => __DIR__ . '/../..' . '/database/migrations/2017_03_07_194214_create_products_table.php',
         'CreateShoppingCartsTable' => __DIR__ . '/../..' . '/database/migrations/2017_04_21_030226_create_shopping_carts_table.php',
